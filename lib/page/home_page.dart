@@ -1,6 +1,7 @@
 
 
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -87,6 +88,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
          title: Text("PokedexApp"),
           backgroundColor: Colors.purpleAccent,
+        //elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight:Radius.circular(20) )
+        ),
         actions: [
           IconButton(onPressed: (){},icon:Icon(Icons.search_outlined) ,),
           IconButton(onPressed: (){},icon:Icon(Icons.filter_alt_outlined) ,),
